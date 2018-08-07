@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div id="structure" class="d-none"></div>
+        <div id="result" class="d-none"></div>
+        <div class="form-group">
+            <label for="input">Input</label>
+            <textarea id="input" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="loop">Loop</label>
+            <input type="text" id="loop" class="form-control" placeholder="Nhân n lần?">
+        </div>
+        <div class="form-group">
+            <label for="output">Output</label>
+            <div id="output" class="form-control custom-control"></div>
+        </div>
+        <input type="button" id="click" class="btn btn-primary" value="Click">
+    </div>
+    <script>
+    var patt = /[0-99]$|[0-9].png$|[0-9].jpg$/;
+
+    $('#click').click(function() {
+        // get Input
+        var input = $('#input').val();
+        $('#structure').html(input);
+        var loop = $('#loop').val();
+        for (i = 0; i < loop; i++) {
+            // update new number
+            $('#structure [name]').each(function() {
+                var name = $(this).attr('name');
+                newName = name.replace(patt, function(match) {
+                    if (match.indexOf('.') > 0) {
+                        var number = match.split(".")[0];
+                        var imgType = match.split(".")[1];
+                        var endString = (parseInt(number) + 1) + "." + imgType;
+                    } else {
+                        var endString = parseInt(match) + 1;
+                    }
+                    return endString;
+                });
+                $(this).attr('name', newName);
+            })
+
+            // update title
+            var $title = $('#structure h3');
+            if ($title.length > 0) {
+                var title = $title.text();
+                var newTitle = title.replace(/[0-9]$/, function(match) {
+                    return parseInt(match) + 1;
+                })
+                $title.text(newTitle);
+            }
+
+            // append to output
+            var htmlItem = $('#structure').html();
+            $('#result').append(htmlItem);
+        }
+        var output = $('#result').html();
+        $('#output').text(output);
+        $('#result').empty();
+    })
+    </script>
+</body>
+
+</html>
