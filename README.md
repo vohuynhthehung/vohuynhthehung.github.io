@@ -3,8 +3,8 @@
 Bước 1
    ```bash
    Vào file **settings_data.json**, trong phần **presets**, thêm **theme_id** muốn cập nhật presets
-   - [Xem hình](http://prntscr.com/lqm0q7)
    ```
+   [Xem hình](http://prntscr.com/lqm0q7)
 Bước 2
    ```bash
    Truy cập vào tool
@@ -14,5 +14,6 @@ Bước 2
    ```
 
    ```bash
-   Trước khi copy kết quả nên kiểm tra output đã đúng định dạng json hay chưa [tại đây](https://jsonformatter.curiousconcept.com/)
+   Trước khi copy kết quả nên kiểm tra output đã đúng định dạng json hay chưa
    ```
+   [tại đây](https://jsonformatter.curiousconcept.com/)
