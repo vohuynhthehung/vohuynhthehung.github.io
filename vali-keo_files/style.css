@@ -793,21 +793,21 @@ footer {
 /******* END OWL CAROUSEL ********/
 
 .collslider--mb{
-    display: block;
-    background: red;
+    /*display: block;*/
+    background: blue;
     overflow-y: hidden;
 
-    /*-ms-overflow-style: none;
+    -ms-overflow-style: none;
     -ms-scroll-snap-type: mandatory;
     -ms-scroll-snap-points-x: snapInterval(0%,100%);
     -ms-scroll-chaining: chained;
-    -webkit-overflow-scrolling: touch;*/
+    -webkit-overflow-scrolling: touch;
 
 
-    width: 100%;
+    /*width: 100%;
     position: relative;
     z-index: 2;
-    margin: 0;
+    margin: 0;*/
 }
 
 .collslider--mb .collslider-scroll{
