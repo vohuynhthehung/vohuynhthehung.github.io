@@ -794,7 +794,7 @@ footer {
 
 .collslider--mb{
     display: block;
-    /*background: transparent;*/
+    background: red;
     overflow-y: hidden;
 
     /*-ms-overflow-style: none;
