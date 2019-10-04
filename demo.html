@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron p-3">
+            <h2 class="text-center">Border radius</h2>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="changesize" name="br" data-w="400px" data-h="100px" checked="true"> 400 x 100 px
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="changesize" name="br" data-w="300px" data-h="200px"> 300 x 200 px
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="changesize" name="br" data-w="800px" data-h="300px"> 800 x 300 px
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="changesize" name="br" data-w="900px" data-h="80px"> 900 x 80 px
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="changesize" name="br" data-w="500px" data-h="500px"> <span class="text-danger">500 x 500 px (hình vuông)</span> 
+            </label>
+        </div>
+        <div class="text-center mt-3 mb-3">
+            <div class="demo-radius">border-radius: 999px</div>
+        </div>
+        <hr>
+        <div class="jumbotron p-3">
+            <h2 class="text-center">Font ROBOTO</h2>
+        </div>
+
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="fw" data-name="300" checked="true">Light 300
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="fw" data-name="400">Regular 400
+            </label>
+        </div>
+        <div class="form-check-inline disabled">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="fw" data-name="500">Medium 500
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="fw" data-name="700">Bold 700
+            </label>
+        </div>
+        <div class="form-check-inline disabled">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="fw" data-name="900">Black 900
+            </label>
+        </div>
+        <div class="text-center">
+            <span class="demo-font">EGANY</span>
+        </div>
+        <hr>
+        <div class="jumbotron p-3">
+            <h2 class="text-center">Text indent</h2>
+        </div>
+        <div class="text-center">
+        <h1 class="demo-text-indent">MUA 2 TẶNG 1</h1></div>
+    </div>
+    <style>
+    .demo-font {
+        font-family: "Roboto";
+        font-size: 100px;
+        font-weight: 300;
+    }
+    .demo-radius{
+        display: inline-block;
+        font-size: 30px;
+        width: 400px;
+        height: 100px;
+        line-height: 100px;
+        border-radius: 999px;
+        background: blue;
+        color: #fff;
+    }
+    .demo-text-indent{
+        /*text-indent: -9999px;*/
+        display: inline-block;
+        width: 800px;
+        height: 100px;
+        color: red;
+        background: url("https://theme.hstatic.net/1000300983/1000431247/14/cybermonday_001_coll_title_img_1.jpg?v=1006");
+    }
+    </style>
+    <script>
+        $('.form-check-input').on('change',function(){
+            var fw = parseInt($(this).attr("data-name"));
+            $('.demo-font').css("font-weight",fw);
+        })
+
+        $('.changesize').on('change',function(){
+            debugger;
+            var width = $(this).attr("data-w");
+            var height = $(this).attr("data-h");
+            $('.demo-radius').css({"width": width, "height": height, "line-height": height});
+        })
+    </script>
+</body>
+
+</html>
