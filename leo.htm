@@ -7,6 +7,7 @@
     <script type="text/javascript" async="" src="./leonardo_files/trekkie.storefront.min.js"></script-->
     <link rel="stylesheet" href="./leonardo_files/theme.scss.css">
     <link rel="stylesheet" href="./leonardo_files/custom.scss.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script>
         // This allows to expose several variables to the global scope, to be used in scripts
     window.theme = {
@@ -155,7 +156,16 @@
                             <div class="Product__Info ">
                                 <div class="Container">
                                     <div class="ProductMeta">
-                                        <h1 class="ProductMeta__Title Heading u-h2">L4 - Túi Messenger iPad Oxford</h1>
+
+                                      <a id="doi_url" href="" onclick="doi_url()">Đổi url</a>
+                                      <script>
+                                        function doi_url(){
+                                          var rad_number = Math.floor(Math.random() * 100000);
+                                          var url_moi = "?variant=888518458" + rad_number;
+                                          window.history.pushState('', '', url_moi);
+                                        }
+                                      </script>
+                                        <h1 class="ProductMeta__Title Heading u-h2">L4-1 - Túi Messenger iPad Oxford</h1>
                                         <div class="ProductMeta__PriceList Heading"><span class="ProductMeta__Price Price Text--subdued u-h4" data-money-convertible="">460.000₫</span></div>
                                     </div>
                                     <form method="post" action="https://www.leonardo.vn/cart/add" id="product_form_4441317834857" accept-charset="UTF-8" class="ProductForm" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
