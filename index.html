@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hung Vo CV</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+</head>
+
+<body style="--baseColor: #3170b2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-12 job-box box--leftside">
+                <div class="contact-box">
+                    <div class="mb-2"><i class="fa fa-phone mr-2"></i>
+                        <a href="tel:0975764867">0975764867</a>
+                    </div>
+                    <div class="mb-2"><i class="fa fa-paper-plane mr-2"></i> <a href="https://t.me/vohuynhthehung">t.me/vohuynhthehung</a></div>
+                    <div class="mb-2"><i class="fa fa-envelope mr-2"></i>
+                        <a href="mailto:vohuynhthehung@gmail.com">vohuynhthehung@gmail.com</a>
+                    </div>
+                    <div class="mb-2"><i class="fa fa-map-marker-alt mr-2"></i> Quận 12, TP. HCM</div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-12">
+                <div class="job-box box--profile">
+                    <div class="avarta pos-relative embed-responsive embed-responsive-1by1">
+                        <img src="https://0.gravatar.com/avatar/796be90ea6ae37205af8ccfea536a23813ba83bb7fa32442870a1ca6ff446f86?size=256" />
+                    </div>
+                    <div class="about-me
+					">
+                        <span class="name">VO HUYNH THE HUNG</span>
+                        <span class="job-pos">Lập trình web Front-end</span>
+                    </div>
+                </div>
+                <div class="job-box box--skill">
+                    <h3 class="job-box--title">KỸ NĂNG</h3>
+                    <div class="skill-item" data-percent="40%" style="--skillPercent:40%">
+                        <span>GRAPHIC DESIGN</span>
+                    </div>
+                    <div class="skill-item" data-percent="98%" style="--skillPercent:98%">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item" data-percent="98%" style="--skillPercent:98%">
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-item" data-percent="92%" style="--skillPercent:90%">
+                        <span>JAVASCRIPT</span>
+                    </div>
+                    <div class="skill-item" data-percent="60%" style="--skillPercent:60%">
+                        <span>REACT JS</span>
+                    </div>
+                    <div class="skill-item" data-percent="98%" style="--skillPercent:98%">
+                        <span>HARAVAN & SAPO</span>
+                    </div>
+                </div>
+                <div class="job-box box--edu">
+                    <h3 class="job-box--title">HỌC VẤN</h3>
+                    <div class="job-box--body">
+                        <div class="job-box--item"> Tốt nghiệp ngành công nghệ thông tin trường HUTECH - 2015</div>
+                        <div class="job-box--item"> Học lập trình web trại trung tâm đào tạo Nhất Nghệ</div>
+                    </div>
+                </div>
+                <div class="job-box box--expe">
+                    <h3 class="job-box--title">KINH NGHIỆM</h3>
+                    <div class="job-box--body">
+                        <div class="job-box--item">1 năm làm việc tại công ty Alpla Circle (startup về ngành ô tô)</div>
+                        <div class="job-box--item">7 năm làm việc tại công ty cổ phần công nghệ EGANY</div>
+                        <div class="job-box--item">
+                            <ul class="mb-0">
+                                <li>Hiểu biết về quy trình xử lý trong 1 website thương mại điện tử và nhu cầu của khách hàng</li>
+                                <li>Xây dựng hơn 20 theme giao diện lớn nhỏ trên nền tảng HRV & Sapo</li>
+                                <li>Support hàng 100 khách hàng sử dụng nền tảng trên</li>
+                                <li>Cùng team xây dựng nhiều tính năng và ứng dụng trên nhiều ngành hàng khác nhau bao gồm: điện tử, thời trang, mỹ phẩm, thực phẩm,...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    img {
+        max-width: 100%;
+    }
+
+    .job-box {
+        padding: 20px 15px;
+        background: #eee;
+        margin-bottom: 15px;
+        border-radius: 20px;
+    }
+
+    .box--profile {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        background: #333;
+        padding: 20px;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .about-me {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about-me .job-pos {
+        font-style: italic;
+        color: lightgray;
+    }
+
+    .skill-item {
+        position: relative;
+        overflow: hidden;
+        background: #9E9E9E;
+        padding: 5px 10px;
+        border-radius: 999px;
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .skill-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .skill-item:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: var(--skillPercent);
+        height: 100%;
+        background: var(--baseColor);
+    }
+
+    .skill-item:after {
+        position: absolute;
+        content: attr(data-percent);
+        left: min(calc(var(--skillPercent) + 5px), calc(100% - 35px));
+    }
+
+    .skill-item span {
+        position: relative;
+        z-index: 9999;
+        color: #ffff;
+    }
+
+    .job-box--title {
+        font-size: 1.5rem;
+    }
+
+    .job-box--item {
+        margin-bottom: 0.25rem;
+    }
+
+    .job-box--item:last-child {
+        margin-bottom: 0;
+    }
+
+    .avarta {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .pos-relative.embed-responsive[class*=embed-responsive-] img {
+        --image-scale: 1;
+        position: absolute;
+        top: var(--img-top, 50%);
+        left: var(--img-left, 50%);
+        transform: translate(-50%, -50%) scale(var(--image-scale));
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+        min-width: 1px;
+        min-height: 1px;
+    }
+
+    .pos-relative.embed-responsive[class*=embed-responsive-] img {
+        width: auto;
+        height: auto;
+    }
+
+    .box--leftside {
+        background: var(--baseColor);
+        color: #fff;
+        padding: 20px 15px;
+    }
+
+    .box--leftside a {
+        color: #fff;
+    }
+
+    @media (min-width: 1200px) {
+        .about-me .name {
+            font-size: 30px;
+        }
+
+        .about-me .job-pos {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .box--profile {
+            grid-template-columns: 100px 1fr;
+            padding: 10px 5px;
+            gap: 10px;
+        }
+
+        .box--leftside {
+            border-radius: 0;
+        }
+
+    }
+    </style>
+</body>
+
+</html>
